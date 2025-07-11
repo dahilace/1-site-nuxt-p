@@ -1,0 +1,47 @@
+@use 'sass:color';
+:root {
+  --index: 1vh + 1vw;
+  --btn-color: #fff;
+  --black: #333;
+  --container-width: 1340px;
+  --container-padding: 10px;
+  --header-height: 0px;
+  --decor-width: 150px;
+  --decor-height: 13px;
+  --decor--height-transform: -6px;
+
+  @media (min-width: 769px) and (min-height: 450px) {
+    --header-height: 8rem;
+  }
+}
+
+.light {
+  --main-bg: #fff;
+  --alt-bg: #f9f9f9;
+  --alt-bg-op: hsla(0, 0%, 98%, 0.95);
+  --main-color: #232323;
+  --main-color-op: rgba(0, 0, 0, 0.65);
+  --overlay-image: rgba(217, 218, 219, 0.75);
+  --overlay-image-op: rgba(217, 218, 219, 0.4);
+  --overlay-text: rgba(217, 218, 219, 0.9);
+  --link-hover: #6680ff;
+  --accent-color: #0018f1;
+  --accent-color-op: #0018f138;
+
+  --gray: rgba(128, 128, 128, 0.45);
+}
+.dark {
+  --main-bg: #333230;
+  --alt-bg: #262524;
+  --alt-bg-op: rgba(38, 37, 36, 0.95);
+  --main-color: #fff;
+  --main-color-op: rgba(255, 255, 255, 0.65);
+  --overlay-image: rgba(95, 95, 95, 0.4);
+  --overlay-image-op: rgba(95, 95, 95, 0.4);
+  --overlay-text: rgba(27, 27, 27, 0.99);
+  --link-hover: #ff7769;
+  --accent-color: #f24738;
+  --accent-color-op: #f2473838;
+
+  --gray: rgba(128, 128, 128, 0.45);
+}

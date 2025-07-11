@@ -1,0 +1,104 @@
+.splide__track {
+  padding: 0.5rem !important;
+}
+
+.splide {
+  // position: relative;
+  margin-inline: auto;
+  padding: 1rem;
+}
+.splide__track {
+  // margin-inline: auto;
+  cursor: grab;
+}
+// .splide__slide[aria-hidden] {
+//   opacity: 0;
+// }
+
+.splider-pagination {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  .splide__pagination__page.is-active {
+    background: var(--accent-color);
+  }
+}
+.splider-arrow {
+  width: 100%;
+  height: 100%;
+  max-width: 2rem;
+  max-height: 2rem;
+  z-index: 111;
+  padding: 0.5rem;
+  position: absolute;
+  display: flex;
+  align-items: center;
+  fill: var(--btn-color);
+  background-color: var(--accent-color);
+  border-radius: 50%;
+  opacity: 0.9;
+  bottom: 50%;
+  transition:
+    0.3s linear filter,
+    0.3s linear background-color;
+  svg {
+    filter: drop-shadow(0 0 1px var(--btn-color));
+  }
+  &--prev {
+    top: 50%;
+    left: 0.5rem;
+    transform: rotate(180deg) translateY(50%);
+  }
+  &--next {
+    top: 50%;
+    right: 0.5rem;
+    transform: translateY(-50%);
+  }
+  &:hover {
+    background-color: var(--link-hover);
+    opacity: 1;
+  }
+  &[disabled] {
+    background-color: var(--link-hover);
+    opacity: 0.5;
+  }
+}
+// AppAbout.vue
+
+.about__splider-pagination {
+  margin-top: 1rem;
+}
+.about__splider-controls {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  z-index: 100;
+}
+
+// AppCoach.vue
+
+// AppComments.vue
+
+.comments__splider-pagination {
+  margin-top: 0.5rem;
+}
+.comments__splider-arrow--prev {
+  bottom: 15%;
+  left: 3rem;
+  @media (min-width: 769px) {
+    bottom: 50%;
+    left: 4.25rem;
+  }
+}
+.comments__splider-arrow--next {
+  bottom: 15%;
+  right: 3rem;
+  @media (min-width: 769px) {
+    bottom: 50%;
+    right: 4.25rem;
+  }
+}
