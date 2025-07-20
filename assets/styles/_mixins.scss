@@ -1,0 +1,19 @@
+@mixin hover-card {
+  color: var(--link-hover);
+  box-shadow: 4px 4px 4px var(--link-hover);
+}
+@mixin card-shadow {
+  box-shadow: 5px 3px 3px var(--gray);
+}
+@mixin card-shadow-solid {
+  box-shadow: 4px 4px 12px 6px var(--gray);
+}
+@mixin card-shadow-hover {
+  box-shadow: 2px 2px 12px var(--gray);
+}
+@mixin link-shadow {
+  box-shadow: 2px 2px 4px var(--accent-color);
+}
+@mixin none-shadow {
+  box-shadow: unset;
+}

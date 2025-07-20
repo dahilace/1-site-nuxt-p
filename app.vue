@@ -1,6 +1,15 @@
 <template>
-  <div>
+  <nuxt-layout>
     <NuxtRouteAnnouncer />
-    <NuxtWelcome />
-  </div>
+    <nuxt-page />
+  </nuxt-layout>
 </template>
+
+<script setup lang="ts">
+// const theme = useThemeStore();
+// useHead({
+//   bodyAttrs: {
+//     class: theme.initTheme(),
+//   },
+// });
+</script>
