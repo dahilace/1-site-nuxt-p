@@ -8,9 +8,10 @@ type Template = {
 
 const SOCIALS_TEMPLATE: Record<string, Template> = {
   vk: { url: 'https://vk.com/', iconName: 'vk' },
-  fb: { url: 'https://facebook.com/', iconName: 'fb' },
   ytb: { url: 'https://youtube.com/', iconName: 'ytb' },
   inst: { url: 'https://instagram.com/', iconName: 'inst' },
+  whatsapp: { url: 'https://whatsapp.com/', iconName: 'whatsapp' },
+  tg: { url: 'https://telegram.org/', iconName: 'tg' },
 };
 
 const props = withDefaults(
@@ -29,7 +30,12 @@ const props = withDefaults(
     </p>
     <ul class="socials__list">
       <li v-for="(item, i) in SOCIALS_TEMPLATE" :key="i">
-        <a :href="item.url" target="_blank" rel="noopener noreferrer">
+        <a
+          :href="item.url"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="socials__link"
+        >
           <svg-icon class="icons-socials" :name="item.iconName" />
         </a>
       </li>
@@ -40,13 +46,16 @@ const props = withDefaults(
     <ul class="socials__list">
       <li v-for="(val, key) in personSocials" :key="key">
         <a
-          class="link"
+          class="socials__link link flex"
           :href="SOCIALS_TEMPLATE[key].url + val"
           target="_blank"
           rel="noopener noreferrer"
         >
-          <component :is="SOCIALS_TEMPLATE[key].iconName" />
-          <span class="marked">{{ val }}</span>
+          <svg-icon
+            class="icons-socials"
+            :name="SOCIALS_TEMPLATE[key].iconName"
+          />
+          <!-- <span class="marked">{{ val }}</span> -->
         </a>
       </li>
       <!-- <li v-if="personSocials?.vk">
@@ -77,14 +86,15 @@ const props = withDefaults(
 .socials__list {
   display: flex;
   justify-self: start;
+  gap: 0.25rem;
 }
 .socials__title {
   font-size: 1rem;
   line-height: 32px;
   margin-bottom: 0.7rem;
 }
-a {
-  display: inline-block;
+.socials__link {
+  display: inline-flex;
   width: 100%;
   height: 100%;
   padding: 0.25rem;

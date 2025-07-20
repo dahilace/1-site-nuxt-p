@@ -33,18 +33,18 @@ const dropdownStore = useDropdownMenuStore();
     <div class="container">
       <div class="header__inner">
         <div class="header__row header__row--mobile">
-          <router-link to="/">
+          <nuxt-link to="/">
             <p class="header__title">БОКСЕРСКИЙ КЛУБ MOSCOWBOXING</p>
             <div class="header__decor-box">
               <svg-icon class="icons-decor" name="decor" />
               <svg-icon class="icons-decor" name="decor" />
             </div>
-          </router-link>
+          </nuxt-link>
 
-          <router-link class="header__logo" to="/">
+          <nuxt-link class="header__logo" to="/">
             <my-logo />
             <span class="marked logo__name">MOSCOWBOXING</span>
-          </router-link>
+          </nuxt-link>
 
           <div class="header__block">
             <div class="header__contact">

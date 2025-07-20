@@ -119,3 +119,8 @@ export type CardNews = {
   imgUrl: string
   id: number
 }
+
+export type CardText = {
+  title: string
+  desc: string[]
+}

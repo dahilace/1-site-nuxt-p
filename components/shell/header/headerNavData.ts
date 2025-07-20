@@ -3,5 +3,5 @@ const aboutDropdown = [{ title: 'новости', path: '/news' }, { title: 'о�
   scheduleDropdown = [{ title: 'тренировки', path: '/schedule' }, { title: 'календарь соревнований', path: '/competitions-calendar' }, { title: 'расписание тренеров', path: '/coach-calendar' }]
 
 
-export const headerNavData: NavItem[] = [{ title: 'О НАС', path: '/about', dropdown: aboutDropdown }, { title: 'ЦЕНЫ', path: '/prices' }, { title: 'ТРЕНЕРЫ', path: '/coaches' }, { title: 'РАСПИСАНИЕ', path: '/schedule', dropdown: scheduleDropdown }, { title: 'КОНТАКТЫ', path: '/contacts' }]
+export const headerNavData: NavItem[] = [{ title: 'О НАС', path: '/about', dropdown: aboutDropdown }, { title: 'ЦЕНЫ', path: '/prices' }, { title: 'ТРЕНЕРЫ', path: '/coach' }, { title: 'РАСПИСАНИЕ', path: '/schedule', dropdown: scheduleDropdown }, { title: 'КОНТАКТЫ', path: '/contacts' }]
 

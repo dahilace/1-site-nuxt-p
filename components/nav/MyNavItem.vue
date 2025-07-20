@@ -14,14 +14,14 @@ defineProps<{
 
 <template>
   <li class="nav__item">
-    <router-link
+    <nuxt-link
       v-if="!data.dropdown"
       class="link nav__link"
       :to="data.path"
       @click="menuStore.toggle(null), mobileHeader.closeNav()"
     >
       {{ data.title }}
-    </router-link>
+    </nuxt-link>
     <a v-else-if="data.dropdown" class="link nav__link">
       {{ data.title }}
     </a>

@@ -70,3 +70,17 @@ img {
     fill: var(--link-hover);
   }
 }
+.brand {
+  font-family: 'Anton';
+  font-size: 2.25rem;
+  letter-spacing: 2px;
+}
+.section-padding {
+  padding-block: 4rem;
+  &--double {
+    padding-top: 8rem;
+  }
+}
+.marked {
+  color: var(--accent-color);
+}

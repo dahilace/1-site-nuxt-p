@@ -11,11 +11,11 @@ defineProps<{
 <template>
   <ul class="dropdown">
     <li class="dropdown__item" v-for="item in data" :key="item.path">
-      <router-link
+      <nuxt-link
         @click="navStore.closeNav()"
         class="link dropdown__link"
         :to="item.path"
-        >{{ item.title }}</router-link
+        >{{ item.title }}</nuxt-link
       >
     </li>
   </ul>

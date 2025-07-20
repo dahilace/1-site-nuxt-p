@@ -1,10 +1,9 @@
-<script setup lang="ts">
-import logo from '~/assets/images/logo.png';
-</script>
+<script setup lang="ts"></script>
 
 <template>
   <div class="logo__box">
-    <img class="logo__img" :src="logo" alt="logo" />
+    <!-- <img class="logo__img" :src="/images/logo.png" alt="logo" /> -->
+    <img class="logo__img" :src="'/images/logo.png'" alt="logo" />
   </div>
 </template>
 

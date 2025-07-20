@@ -17,13 +17,13 @@ defineProps<{
     <p v-if="route" class="section__route">{{ route }}</p>
     <div class="section__heading-block">
       <div class="section__title-block">
-        <svg-icon name="decor" />
+        <svg-icon name="decor" class="icons-decor"/>
         <h2 class="section__title">
           {{ title }}
         </h2>
       </div>
       <router-link class="section__link link underline" v-if="link" :to="link"
-        ><span>Все</span> <span class="lower">{{ title }}</span></router-link
+        ><span>Все</span> <span class="lowercase">{{ title }}</span></router-link
       >
     </div>
   </div>

@@ -4,7 +4,7 @@
 </script>
 
 <template>
-  <div class="wrapper">
+  <div class="wrapper" @click="console.log('clicked')">
     <app-header />
     <main>
       <slot />

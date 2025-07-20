@@ -5,17 +5,26 @@ export default defineNuxtConfig({
   // srcDir: '0_app',
   compatibilityDate: '2025-05-15',
   devtools: { enabled: true },
-  components: [
-    { path: '~/components/shell/', pathPrefix: false },
-    { path: '~/components/special/', pathPrefix: false },
-    { path: '~/components/nav/', pathPrefix: false },
-    { path: '~/components/ui/', pathPrefix: false },
-  ],
+  components: {
+    dirs: [
+      { path: 'nuxt/dist/app/components', pathPrefix: false },
+      { path: '~/components/shell/', pathPrefix: false },
+      { path: '~/components/special/', pathPrefix: false },
+      { path: '~/components/nav/', pathPrefix: false },
+      { path: '~/components/ui/', pathPrefix: false },
+      { path: '~/components/sections/', pathPrefix: false },
+      { path: '~/components/entities/', pathPrefix: false },
+    ],
+  },
   css: ['~/assets/styles/index.scss'],
-  modules: ['@nuxtjs/svg-sprite', '@pinia/nuxt', '@nuxtjs/tailwindcss', '@nuxtjs/tailwindcss'],
+  modules: ['@nuxtjs/svg-sprite', '@pinia/nuxt', '@nuxtjs/tailwindcss', 'vue-yandex-maps/nuxt'],
   svgSprite: {
     // input: 'assets/sprites/svg',
     // output: '0_app/assets/sprites/gen',
+  },
+  yandexMaps: {
+    apikey: process.env.YANDEX_MAP,
+    lang: 'ru_RU',
   },
   app: {
     head: {
@@ -35,5 +44,5 @@ export default defineNuxtConfig({
         }
       ]
     }
-  }
+  },
 })

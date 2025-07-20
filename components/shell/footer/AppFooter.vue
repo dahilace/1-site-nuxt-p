@@ -8,13 +8,13 @@ import { footerNavData } from './footerNavList';
       <div class="footer__inner">
         <div class="footer__row">
           <div class="footer__brand">
-            <router-link to="/">
+            <nuxt-link to="/">
               <my-logo />
-            </router-link>
-            <router-link to="/" class="footer__name">
+            </nuxt-link>
+            <nuxt-link to="/" class="footer__name">
               <p>БОКСЕРСКИЙ КЛУБ <span class="marked">MOSCOWBOXING</span></p>
               <!-- <icon-decor></icon-decor> -->
-            </router-link>
+            </nuxt-link>
           </div>
           <my-nav-list :nav-items="footerNavData" class="footer__nav" />
         </div>
@@ -38,9 +38,9 @@ import { footerNavData } from './footerNavList';
             Наверх</a
           > -->
           <div class="copyright">
-            <router-link to="/"
+            <nuxt-link to="/"
               >2009 -
-              {{ new Date().getFullYear() }} ©Moscowboxing.ru</router-link
+              {{ new Date().getFullYear() }} ©Moscowboxing.ru</nuxt-link
             >
             <p>Все права защищены</p>
           </div>
